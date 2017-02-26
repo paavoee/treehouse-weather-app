@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mProgressBar.setVisibility(View.INVISIBLE);
+        // TODO: replace refresh button with pull-down-to-refresh
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getForecast() {
+        // TODO: replace hardcoded location with dynamic location
+        // TODO: get value of apiKey from a file (that is gitignored)
         String apiKey = "883d36c70835e4c07c4a80c52b8fc8be";
         double latitude = 65.0123;
         double longitude = 25.46816;
