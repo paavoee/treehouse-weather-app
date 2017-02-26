@@ -64,11 +64,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void getForecast() {
         String apiKey = "883d36c70835e4c07c4a80c52b8fc8be";
-        double latitude = 37.8267;
-        double longitude = -122.4233;
+        double latitude = 65.0123;
+        double longitude = 25.46816;
+        String queryParams = "exclude=minutely,hourly,daily,alerts&units=si";
 
         String forecastUrl = "https://api.darksky.net/forecast/" + apiKey +
-                              "/" + latitude + "," + longitude;
+                              "/" + latitude + "," + longitude + "?" + queryParams;
 
         if (isNetworkAvailable()) {
             toggleRefresh();
